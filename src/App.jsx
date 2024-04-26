@@ -3,7 +3,7 @@ import "./App.scss";
 import MyNav from "./components/MyNav";
 import MyBar from "./components/MyBar";
 import Myfooter from "./components/MyFooter";
-import MyGallery from "./components/MyGallery";
+
 
 import { Container, Row } from "react-bootstrap";
 import MyAccount from "./components/MyAccount";
