@@ -16,34 +16,34 @@ const MyNav = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-           <span class="navbar-toggler-icon"></span>
+           <span className="navbar-toggler-icon"></span>
         </Button>
         <Navbar.Collapse className="collapse navbar-collapse" id="navbarSupportedContent">
           <Nav className="navbar-nav me-auto mb-2 mb-lg-0">
-            <Nav.Link className="nav-item">
-              <a className="nav-link active fw-bold" href="#home">
+            <Nav.Link className=" bold "href="#home">
+              
                 Home
-              </a>
+             
             </Nav.Link>
-            <Nav.Link className="nav-item">
-              <a className="nav-link fw-bold" href="#tv">
+            <Nav.Link className=" bold "href="#tv">
+              
                 TV Shows
-              </a>
+              
             </Nav.Link>
-            <Nav.Link className="nav-item">
-              <a className="nav-link fw-bold" href="#movie">
+            <Nav.Link className=" bold " href="#movie">
+              
                 Movies
-              </a>
+             
             </Nav.Link>
-            <Nav.Link className="nav-item">
-              <a className="nav-link fw-bold" href="#add">
+            <Nav.Link className=" bold " href="#add" >
+               
                 Recently Added
-              </a>
+              
             </Nav.Link>
-            <Nav.Link className="nav-item">
-              <a className="nav-link fw-bold" href="#list">
+            <Nav.Link className="nav-item"href="#list">
+             
                 My List
-              </a>
+             
             </Nav.Link>
           </Nav>
           <div className="d-flex align-items-center">
