@@ -20,22 +20,22 @@ const MyNav = () => {
         </Button>
         <Navbar.Collapse className="collapse navbar-collapse" id="navbarSupportedContent">
           <Nav className="navbar-nav me-auto mb-2 mb-lg-0">
-            <Nav.Link className=" bold "href="#home">
+            <Nav.Link href="#home">
               
                 Home
              
             </Nav.Link>
-            <Nav.Link className=" bold "href="#tv">
+            <Nav.Link href="#tv">
               
                 TV Shows
               
             </Nav.Link>
-            <Nav.Link className=" bold " href="#movie">
+            <Nav.Link  href="#movie">
               
                 Movies
              
             </Nav.Link>
-            <Nav.Link className=" bold " href="#add" >
+            <Nav.Link  href="#add" >
                
                 Recently Added
               

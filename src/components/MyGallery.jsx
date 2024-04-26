@@ -45,8 +45,10 @@ class MyGallery extends Component {
         {this.state.films.Search !== undefined &&
           this.state.films.Search.slice(0, 6).map((film, i) => {
             return (
-              <Col key={film.imdbID} className=" mb-2 text-center px-1">
+              <Col key={film.imdbID} className=" mb-2 text-center px-1 film-poster">
                 <img className="img-fluid" src={film.Poster} alt={film.Title} />
+                <p className="text-white">{film.Title}</p>
+                <i class="bi bi-play-circle"></i>
               </Col>
             );
           })}

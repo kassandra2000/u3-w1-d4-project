@@ -29,6 +29,11 @@ function App() {
         <Row className="row-cols-2 row-cols-sm-3 row-cols-lg-6  mb-4">
           <MyGallery name="star wars" />
         </Row>
+
+        <h4>For You</h4>
+        <Row className="row-cols-2 row-cols-sm-3 row-cols-lg-6  mb-4">
+          <MyGallery name="vampire" />
+        </Row>
         {/* <MyAccount/> */}
         {/* <MyProfile/> */}
         <Myfooter />
