@@ -1,3 +1,5 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
 import MyNav from "./components/MyNav";
@@ -15,25 +17,21 @@ function App() {
       <MyBar />
       <Container fluid className="px-4 film">
         <h4>Trending Now</h4>
-        <Row className=" row-cols-2 row-cols-sm-3 row-cols-lg-6  mb-4">
-          <MyGallery name="Batman" />
-        </Row>
+
+        <MyGallery name="Batman" />
 
         <h4>Watch it Again</h4>
-        <Row className="row-cols-2 row-cols-sm-3 row-cols-lg-6  mb-4">
-          <MyGallery name="Harry Potter" />
-        </Row>
+
+        <MyGallery name="Harry Potter" />
 
         <h4>New Releases</h4>
 
-        <Row className="row-cols-2 row-cols-sm-3 row-cols-lg-6  mb-4">
-          <MyGallery name="star wars" />
-        </Row>
+        <MyGallery name="star wars" />
 
         <h4>For You</h4>
-        <Row className="row-cols-2 row-cols-sm-3 row-cols-lg-6  mb-4">
-          <MyGallery name="vampire" />
-        </Row>
+
+        <MyGallery name="vampire" />
+
         {/* <MyAccount/> */}
         {/* <MyProfile/> */}
         <Myfooter />

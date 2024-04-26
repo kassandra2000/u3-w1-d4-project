@@ -68,7 +68,7 @@ footer {
     width: 100px;
     height: 55px;
   }
-  a{
+  a {
     font-weight: bold;
   }
 }
@@ -102,7 +102,7 @@ footer {
     text-decoration: none;
     color: white;
   }
-  button{
+  button {
     border: none;
     color: white;
     background-color: rgb(65, 65, 65);
@@ -112,9 +112,11 @@ footer {
     }
   }
 }
-.profile{
-  .p{opacity: 0.25}
-  img{
+.profile {
+  .p {
+    opacity: 0.25;
+  }
+  img {
     width: 13vw;
     height: 13vw;
   }
@@ -129,3 +131,32 @@ footer {
     }
   }
 }
+.film-poster {
+  position: relative;
+  .play {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    color: rgb(248, 91, 91);
+    box-shadow: 2px 2px 3px rgb(192, 70, 70);
+    border-radius: 50%;
+    padding: 0 5px;
+    &:hover {
+      color: rgb(255, 12, 12);
+      box-shadow: 2px 2px 3px rgb(252, 34, 34);
+      transform: scale(1.2);
+    }
+  }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #dd3f3f;
+  fill: white;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  box-shadow: 1px 2px 4px red;
+}
+.slick-dots li button:before { display: none;}

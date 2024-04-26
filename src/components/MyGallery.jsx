@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Alert, Col, Spinner } from "react-bootstrap";
+import Slider from "react-slick";
 
 class MyGallery extends Component {
   state = { films: {}, isLoading: false, isError: false };
@@ -29,29 +30,69 @@ class MyGallery extends Component {
     this.fetchGalleryBatman();
   }
   render() {
+    const settings = {
+      infinite: true,
+      centerPadding: "30px",
+      centerMode: true,
+      speed: 500,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      pauseOnHover: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 380,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
+
     return (
       <>
-       
         {this.state.isLoading && (
-          <Spinner animation="border" role="status" variant ="light">
+          <Spinner animation="border" role="status" variant="light">
             <span className="visually-hidden">Loading...</span>
           </Spinner>
         )}
         {this.state.isError && (
-         <Alert  variant="danger">
-         errore nel caricamento dei film
-       </Alert>
+          <Alert variant="danger">errore nel caricamento dei film</Alert>
         )}
-        {this.state.films.Search !== undefined &&
-          this.state.films.Search.slice(0, 6).map((film, i) => {
-            return (
-              <Col key={film.imdbID} className=" mb-2 text-center px-1 film-poster">
-                <img className="img-fluid" src={film.Poster} alt={film.Title} />
-                <p className="text-white">{film.Title}</p>
-                <i class="bi bi-play-circle"></i>
-              </Col>
-            );
-          })}
+        <Slider {...settings}>
+          {this.state.films.Search !== undefined &&
+            this.state.films.Search.slice(0, 6).map((film, i) => {
+              return (
+                <Col
+                  key={film.imdbID}
+                  className=" mb-2 text-center px-1 film-poster "
+                >
+                  <img
+                    className="img-fluid"
+                    src={film.Poster}
+                    alt={film.Title}
+                  />
+                  <i class="bi bi-play-circle  play"></i>
+                </Col>
+              );
+            })}
+        </Slider>
       </>
     );
   }
